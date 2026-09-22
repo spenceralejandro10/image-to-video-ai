@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 from pathlib import Path
+
 from PIL import Image
 
 ALLOWED_SUFFIXES = {".png", ".jpg", ".jpeg", ".webp"}
