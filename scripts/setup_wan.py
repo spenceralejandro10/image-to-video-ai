@@ -1,9 +1,9 @@
 from __future__ import annotations
 
 import argparse
-from pathlib import Path
 import subprocess
 import sys
+from pathlib import Path
 
 
 def run(cmd: list[str], cwd: Path | None = None) -> None:
@@ -24,14 +24,16 @@ def main() -> None:
     model_dir.parent.mkdir(parents=True, exist_ok=True)
 
     if not repo_dir.exists():
-        run([
-            "git",
-            "clone",
-            "--depth",
-            "1",
-            "https://github.com/Wan-Video/Wan2.2.git",
-            str(repo_dir),
-        ])
+        run(
+            [
+                "git",
+                "clone",
+                "--depth",
+                "1",
+                "https://github.com/Wan-Video/Wan2.2.git",
+                str(repo_dir),
+            ]
+        )
     else:
         print(f"Wan2.2 ya existe en {repo_dir}; no se vuelve a clonar.")
 
