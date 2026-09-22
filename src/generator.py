@@ -1,12 +1,12 @@
 from __future__ import annotations
 
-from dataclasses import dataclass
-from pathlib import Path
 import math
 import subprocess
 import sys
 import time
 import uuid
+from dataclasses import dataclass
+from pathlib import Path
 
 import imageio.v2 as imageio
 import numpy as np
