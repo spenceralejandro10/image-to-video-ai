@@ -1,5 +1,7 @@
 from __future__ import annotations
 
+import os
+
 import gradio as gr
 
 from src.config import Settings
@@ -113,8 +115,9 @@ with gr.Blocks(title="MotionLab AI") as demo:
     )
 
 if __name__ == "__main__":
+    port = int(os.getenv("PORT", "7860"))
     demo.queue(default_concurrency_limit=1).launch(
         server_name="0.0.0.0",
-        server_port=7860,
+        server_port=port,
         css=CSS,
     )
